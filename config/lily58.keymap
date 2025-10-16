@@ -1,6 +1,6 @@
 /*
  * Allium58 keymap inspired by Glove80 (preferred) + Sweep (HRMs)
- * Goal: keep similar layers/flows, but stick to core ZMK behaviors for reliable builds.
+ * Build-safe: only core ZMK behaviors and valid key/behavior names.
  */
 
 #include <behaviors.dtsi>
@@ -20,25 +20,6 @@
             quick-tap-ms = <175>;
             require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
-        };
-    };
-
-    /* Optional small combos (remove if undesired) */
-    combos {
-        compatible = "zmk,combos";
-
-        // Q+W -> ESC
-        combo_qw_esc {
-            timeout-ms = <50>;
-            key-positions = <13 14>;
-            bindings = <&kp ESC>;
-        };
-
-        // I+O -> TAB
-        combo_io_tab {
-            timeout-ms = <50>;
-            key-positions = <26 27>;
-            bindings = <&kp TAB>;
         };
     };
 };
@@ -82,10 +63,10 @@
         sym_layer {
             display-name = "Symbols";
             bindings = <
-/* Row 1 (12) */  &kp GRAVE  &kp TILDE  &kp HASH   &kp AMPS   &kp PIPE                      &kp CARET  &kp LBRC  &kp RBRC  &kp LBKT  &kp RBKT  &kp DLLR  &trans
-/* Row 2 (12) */  &kp EXCL   &kp UNDER  &kp COLON  &kp EQUAL  &kp DLLR                       &kp AT     &kp LPAR  &kp RPAR  &kp UNDER &kp SEMI  &kp BSLH  &trans
-/* Row 3 (12) */  &kp PRCNT  &kp QMARK  &kp STAR   &kp PLUS   &kp BSLH                        &kp FSLH   &kp MINUS &kp LT    &kp GT    &kp DQT   &kp SQT   &trans
-/* Row 4 (14) */  &trans     &trans     &trans     &trans     &trans   &trans  &trans   &trans     &trans   &trans   &trans     &trans     &trans     &trans
+/* Row 1 (12) */  &kp GRAVE  &kp TILDE  &kp HASH   &kp AMPS   &kp PIPE                      &kp CARET  &kp LBRC  &kp RBRC  &kp LBKT  &kp RBKT  &kp DOLLAR  &trans
+/* Row 2 (12) */  &kp EXCL   &kp UNDER  &kp COLON  &kp EQUAL  &kp DOLLAR                    &kp AT     &kp LPAR  &kp RPAR  &kp UNDER &kp SEMI  &kp BSLH    &trans
+/* Row 3 (12) */  &kp PRCNT  &kp QMARK  &kp STAR   &kp PLUS   &kp BSLH                       &kp FSLH   &kp MINUS &kp LT    &kp GT    &kp DQT   &kp SQT     &trans
+/* Row 4 (14) */  &trans     &trans     &trans     &trans     &trans   &trans  &trans   &trans     &trans   &trans   &trans     &trans     &trans       &trans
 /* Thumbs (8) */               &trans     &trans     &trans      &trans                        &trans      &trans      &trans      &trans
             >;
         };
@@ -107,11 +88,4 @@
             display-name = "Adjust";
             bindings = <
 /* Row 1 (12) */  &sys_reset  &bt BT_CLR_ALL  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2          &bt BT_SEL 3   &bt BT_SEL 4  &trans  &trans  &trans  &trans  &trans
-/* Row 2 (12) */  &bootloader &kp F1          &kp F2         &kp F3         &kp F4                 &kp F5         &kp F6        &kp F7  &kp F8  &kp F9  &kp F10 &trans
-/* Row 3 (12) */  &trans      &kp RGB_TOG     &kp RGB_HUI    &kp RGB_SAI    &kp RGB_BRI            &kp RGB_EFF    &kp RGB_SPD   &kp RGB_HUD &kp RGB_SAD &kp RGB_BRD &trans &trans
-/* Row 4 (14) */  &trans      &trans          &trans         &trans         &trans     &trans  &trans   &trans    &trans        &trans        &trans      &trans      &trans      &trans
-/* Thumbs (8) */               &trans          &trans         &to L_BASE      &trans                 &trans          &trans         &trans         &trans
-            >;
-        };
-    };
-};
+/* Row 2 (12) */  &bootloader &kp F1          &kp F2         &kp F3         &kp F4                 &kp F5         &kp F6        &kp F7  &kp F8
