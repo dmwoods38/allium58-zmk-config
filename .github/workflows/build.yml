@@ -1,4 +1,13 @@
-on: [push, pull_request, workflow_dispatch]
+on:
+  push:
+    paths-ignore:
+      - '**/*.md'
+      - '**/*.MD'   # (optional) catch uppercase
+  pull_request:
+    paths-ignore:
+      - '**/*.md'
+      - '**/*.MD'
+  workflow_dispatch: {}
 
 jobs:
   build:
