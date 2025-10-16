@@ -44,11 +44,11 @@
         sym_layer {
             display-name = "Symbols";
             bindings = <
-&trans     &trans  &trans  &trans   &trans   &trans                     &trans       &trans     &trans     &trans    &trans     &trans
-&kp GRAVE  &kp N1  &kp N2  &kp N3   &kp N4   &kp N5                     &kp N6       &kp N7     &kp N8     &kp N9    &kp N0     &trans
-&kp F1     &kp F2  &kp F3  &kp F4   &kp F5   &kp F6                     &trans       &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &trans
-&kp F7     &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &trans  &kp KP_PLUS  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT   &kp BSLH
-                           &trans   &trans   &trans   &trans    &trans  &trans       &trans     &trans
+&trans  &trans           &trans          &trans     &trans            &trans                         &trans       &trans                &trans                 &trans            &trans             &trans
+&trans  &kp GRAVE        &kp TILDE       &kp HASH   &kp AMPERSAND     &kp PERCENT                    &kp CARET    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
+&trans  &kp EXCLAMATION  &kp UNDERSCORE  &kp COLON  &kp EQUAL         &kp DOLLAR                     &kp AT_SIGN  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE    &kp SEMICOLON      &kp SINGLE_QUOTE
+&trans  &kp LESS_THAN    &kp MINUS       &kp PIPE   &kp GREATER_THAN  &trans       &trans    &trans  &trans       &kp PLUS              &kp ASTERISK           &kp LBKT          &trans             &trans
+                                         &trans     &trans            &trans       &trans    &trans  &trans       &trans                &trans
             >;
         };
 
